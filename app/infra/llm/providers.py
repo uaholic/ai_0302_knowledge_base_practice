@@ -11,3 +11,4 @@ class LLVProvider:
         model_name = model_name or infra_config.llm.lv_model
         return get_llm_client(model_name)
 
+llm_provider = LLVProvider()
