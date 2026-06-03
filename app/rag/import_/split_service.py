@@ -43,6 +43,10 @@ def split_by_title(md_content: str, file_title: str) -> list[dict]:
     for line in lines:
         line=line.strip()
 
+        if not line:
+            logger.warning(f"当前行为空行，跳过")
+            continue
+
         if line.startswith("```") or line.startswith("~~~"):
             is_code_block = not is_code_block
             cur_content_lines.append(line)
