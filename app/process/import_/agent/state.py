@@ -19,7 +19,7 @@ class ImportGraphState(TypedDict):
 
     md_content:str
     item_name:str
-    trunks:list
+    chunks:list
     embedding_content:list
 
 
@@ -34,7 +34,7 @@ default_state: ImportGraphState = {
     "file_title": "",
     "md_content": "",
     "item_name": "",
-    "trunks": [],
+    "chunks": [],
     "embedding_content": [],
 }
 
