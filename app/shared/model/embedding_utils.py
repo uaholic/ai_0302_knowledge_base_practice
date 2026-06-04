@@ -118,3 +118,5 @@ def generate_embeddings(texts: list[str]) -> dict[str, list]:
         raise  # 不吞异常，向上传递让调用方做重试/降级处理
 
 
+if __name__ == '__main__':
+    get_bge_m3_ef()
