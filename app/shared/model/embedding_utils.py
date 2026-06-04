@@ -120,3 +120,8 @@ def generate_embeddings(texts: list[str]) -> dict[str, list]:
 
 if __name__ == '__main__':
     get_bge_m3_ef()
+    result = generate_embeddings(["测试一下 BGE-M3","大风哥太帅了"])
+    print("dense数量:", len(result["dense"]))
+    print("dense维度:", len(result["dense"][0]))
+    print("sparse数量:", len(result["sparse"]))
+    print("sparse示例:", list(result["sparse"][0].items())[:10])
